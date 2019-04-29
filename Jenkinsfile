@@ -13,7 +13,7 @@ node('master') {
 		dir('/root/DevOpsProject/Terr/Terraform') {
 			stage('Infa Creation'){
 				sh "/usr/local/bin/terraform apply -auto-approve -var-file=../modulone.tfvars"
-				sh "terraform output aws_instance_public_ip > /root/DevOpsProject/Ansible/aws_dns_name.txt"
+				sh "terraform output aws_instance_public_dns > /root/DevOpsProject/Ansible/aws_dns_name.txt"
 			}
 		}
 		
