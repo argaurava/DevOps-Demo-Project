@@ -14,12 +14,13 @@ node('master') {
 			stage('Infa Creation'){
 				sh "/usr/local/bin/terraform apply -auto-approve -var-file=../modulone.tfvars"
 				sh "/usr/local/bin/terraform output aws_instance_public_dns > /root/DevOpsProject/Ansible/aws_dns_name.txt"
+				sh "terraform output password > /home/arun_gaurav1989/password.txt && chmod 755 /home/arun_gaurav1989/password.txt"
 			}
 		}
 		
 		dir('/root/DevOpsProject/Ansible') {
 			stage('Ansible Configuration'){
-				sh "/root/Ansible/create_inv.sh"
+				sh "/root/DevOpsProject/Ansible/create_inv.sh"
 				sh "/usr/bin/ansible-playbook -i invertory.ini site.yml"
 			}
 		}
