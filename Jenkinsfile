@@ -1,19 +1,19 @@
 node('master') {
 	try{
 		
-		# App checkout from Git
+		/* App checkout from Git */
 			
 		stage('Checkout ') {
 		 	git 'https://github.com/argaurava/DevOps-Demo-Project.git'
 		}
 
-		# Maven call to Build and Clean Application
+		/* Maven call to Build and Clean Application */
 		
 		stage('Build Automation') {    
 			sh 'mvn clean package'
 		}
 		
-		# Terraform call to buid Infra on AWS cloud
+		/* Terraform call to buid Infra on AWS cloud */
 		
 		dir('/root/DevOpsProject/Terr/Terraform') {
 			stage('Infa Creation'){
@@ -23,7 +23,7 @@ node('master') {
 			}
 		}
 		
-		# Ansible call to configure aws instanse for webserver
+		/* Ansible call to configure aws instanse for webserver */
 		
 		dir('/root/DevOpsProject/Ansible') {
 			stage('Ansible Configuration'){
