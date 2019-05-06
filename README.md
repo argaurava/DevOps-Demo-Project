@@ -29,7 +29,8 @@ This project is to deploy maven project on AWS infrastructure.
 - AWS Account
 
 ### Step to Install the Applicaiton 
-* Create directory for as Anisble and Terraform and place the site.yml and main.tf
+* below steps needs to be follow on controlling machine 
+* Create directory as Anisble and Terraform and place the site.yml and main.tf
 * Create directory in Terraform for your AWS secrete key, access key and perm file.
 * Create a shell script in Ansible directory to create invertory.ini file from terraform output.
 * Create pipeline job in Jenkins and copy the Jenkins file content in pipeline tab.
