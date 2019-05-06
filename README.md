@@ -6,17 +6,17 @@ This project is to create two instances on AWS infrastructure in two different A
 
 ## Required Software’s to install on controlling machine
 
-# To integrate and run the build 
+* To integrate and run the build 
   - Jenkins 
-# To create infra on AWS Cloud 
+* To create infra on AWS Cloud 
   - Terraform 
-# To configure created AWS instances create by terraform 
+* To configure created AWS instances create by terraform 
   - Ansible 
-# To setup the encrypted password for IAM user 
+* To setup the encrypted password for IAM user 
   - Keybase 
-# To create tomcat container on AWS  
+* To create tomcat container on AWS  
   - Docker
-# To perform all above action 
+* To perform all above action 
 - AWS Account
 
 #### Installing
@@ -36,7 +36,7 @@ This project is to create two instances on AWS infrastructure in two different A
 - Create a variable file for aws_access_key, aws_secret_key and private_key_path.
 - Install keybase on controlling machine and provide keybase user in pgp_key in terraform file.
 
-## Flow of jenkins file
+## Build Flow
 
 1. Applicaiton checkout from GIT repo.
 2. Build the application with maven.
