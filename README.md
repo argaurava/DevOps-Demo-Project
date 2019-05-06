@@ -1,4 +1,4 @@
-##### Project Title
+### Project Title
 
 This project is to create two instances on AWS infrastructure in two different AZ in a VPC 
 
@@ -19,9 +19,7 @@ This project is to create two instances on AWS infrastructure in two different A
 * To perform all above action 
 - AWS Account
 
-#### Installing
-
-## Step to Install the Applicaiton 
+### Step to Install the Applicaiton 
 
 * Create directory for as Anisble and Terraform and place the site.yml and main.tf
 * Create directory in Terraform for your AWS secrete key, access key and perm file.
