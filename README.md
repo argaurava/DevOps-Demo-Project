@@ -19,7 +19,7 @@ This project is to deploy maven project on AWS infrastructure.
   - Jenkins 
 * To create infra on AWS Cloud 
   - Terraform 
-* To configure created AWS instances create by terraform 
+* To configure AWS instances created by terraform 
   - Ansible 
 * To setup the encrypted password for IAM user 
   - Keybase 
