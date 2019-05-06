@@ -1,11 +1,14 @@
 ### Project Title
-
 This project is to deploy maven project on AWS infrastructure.
 
 #### AWS infrastructure details 
-
 * VPC with CIDR block 11.0.0.0/16 
-* Security Group with 
+* Internet gateway attached to VPC
+* Security Group with ingress port 22,80,81,82,83,84 and egress all.
+* Two subnet in two different AZ
+* Route table attached to VPC
+* Application load balancer, listen on port 80, attached to instance.
+* IAM user, having a policy to describe and stop the instance.
 
 ##### Prerequisites
 
@@ -25,7 +28,6 @@ This project is to deploy maven project on AWS infrastructure.
 - AWS Account
 
 ### Step to Install the Applicaiton 
-
 * Create directory for as Anisble and Terraform and place the site.yml and main.tf
 * Create directory in Terraform for your AWS secrete key, access key and perm file.
 * Create a shell script in Ansible directory to create invertory.ini file from terraform output.
@@ -49,6 +51,5 @@ This project is to deploy maven project on AWS infrastructure.
 * Ansible playbook call to configure hosts for Docker, Tocat Apache installation.
 * Catch build FAILURE
 
-### Authors
-
+### Author
 Arun Gaurav - arun.gaurav1989@gmail.com
