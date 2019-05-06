@@ -9,6 +9,7 @@ This project is to deploy maven project on AWS infrastructure.
 * Route table attached to VPC
 * Application load balancer, listen on port 80, attached to instance.
 * IAM user, having a policy to describe and stop the instance.
+* Two instance in two different AZ.
 
 ##### Prerequisites
 
